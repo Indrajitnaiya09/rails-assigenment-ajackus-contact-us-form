@@ -7,7 +7,7 @@ class ContactsController < ApplicationController
         @contact = Contact.new(contact_params)
         respond_to do |format|
           if @contact.save
-            format.html { render :new, notice: "Thanks for contact, We'll get back to you shortly."  }
+            format.html { redirect_to contacts_url, notice: "Thanks for contact, We'll get back to you shortly."  }
           else
             format.html { render :new, notice: 'Error occur due to submit'}
           end
