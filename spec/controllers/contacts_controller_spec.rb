@@ -20,7 +20,7 @@ RSpec.describe ContactsController, type: :controller do
     describe 'POST create' do
         it 'it should redirect to show page of profile' do
             post :create, params: { contact: contact_attributes }
-            expect(response.status).to eq(200)
+            expect(response.status).to eq(302)
         end
     end
 end
